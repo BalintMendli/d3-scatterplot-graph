@@ -85,5 +85,34 @@ document.addEventListener('DOMContentLoaded', () => {
       .attr('transform', `translate(${padding},0)`)
       .call(yAxis)
       .attr('id', 'y-axis');
+
+    const legendText = [
+      ['No doping allegiations', 'orange'],
+      ['Riders with doping allegations', 'royalblue'],
+    ];
+
+    const legend = svg
+      .selectAll('.legend')
+      .data(legendText)
+      .enter()
+      .append('g')
+      .attr('class', 'legend')
+      .attr('transform', (d, i) => `translate(0,${i * 20})`);
+
+    legend
+      .append('rect')
+      .attr('x', w - 18)
+      .attr('y', (h - padding) / 2 + 18)
+      .attr('width', 18)
+      .attr('height', 18)
+      .style('fill', d => d[1]);
+
+    legend
+      .append('text')
+      .attr('x', w - 21)
+      .attr('y', (h - padding) / 2 + 27)
+      .attr('dy', '.35em')
+      .style('text-anchor', 'end')
+      .text(d => d[0]);
   });
 });
