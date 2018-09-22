@@ -15,11 +15,21 @@
     "class-methods-use-this": 0,
     "import/no-named-as-default": 0,
     "linebreak-style": 0,
-    "quotes": [
-      1,
-      "double",
+    "comma-dangle": [
+      "error",
       {
-        "avoidEscape": true
+        "arrays": "always-multiline",
+        "objects": "always-multiline",
+        "imports": "always-multiline",
+        "exports": "always-multiline",
+        "functions": "only-multiline"
+      }
+    ],
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true,
+        "trailingComma": "es5"
       }
     ],
     "react/jsx-filename-extension": [
