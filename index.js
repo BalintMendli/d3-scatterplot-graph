@@ -21,7 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
         element.Doping,
       ]);
     });
-    console.log(points);
     d3.select('#container')
       .append('h1')
       .text('Doping in Professional Bicycle Racing')
